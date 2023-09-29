@@ -1,0 +1,306 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-stretch: condensed;
+  font-family: "Playfair";
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 95%;
+  height: auto;
+}
+
+div.rectangle {
+  height: 300px;
+  background-color: var(--bg-color);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border: 0;
+}
+
+div.triangle {
+  border-top: 40vh solid var(--bg-color);
+  border-left: 0vw solid var(--bg-color);
+  border-right: 100vw solid transparent;
+  border-bottom: 0vh solid transparent;
+  filter: drop-shadow(-16px 6px 3px rgba(0, 0, 0, 0.5));
+}
+
+.main-photo {
+  z-index: 20;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+:root {
+  --bg-color: #0891b2;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "Lato";
+  color: #333;
+  line-height: 2.5rem;
+}
+
+header {
+  position: relative;
+  min-height: calc(300px + 40vh);
+}
+
+header div.draw {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+section.about-me {
+  max-width: 1900px;
+  background-color: white;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  padding-left: 60px;
+  padding-top: 60px;
+  margin-left: 90px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+@media (max-width: 1024px) {
+  div.main-photo-container {
+    max-width: 400px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.main-photo-container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  div.triangle {
+    display: none;
+  }
+
+  div.rectangle {
+    width: 200%;
+  }
+
+  section.about-me {
+    margin: 30px;
+  }
+
+  div.main-photo-container {
+    margin: 30px;
+  }
+
+  section.project {
+    width: 300px;
+  }
+
+  main {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  section.project {
+    width: 270px;
+  }
+}
+
+h1.name {
+  padding: 10px;
+}
+
+div.main-photo-container {
+  background-image: url("https://ca.slack-edge.com/T033ZMPF11B-U055S3ZEZGT-037fd48eac54-512");
+  background-position: center;
+  max-width: 550px;
+  min-height: 550px;
+  float: left;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin-top: -30px;
+  margin-left: 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+}
+
+section.about-me h2 {
+  padding-bottom: 30px;
+}
+
+img.icon {
+  width: 48px;
+  height: 48px;
+}
+
+div.icon-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+
+.project-icon {
+  width: 32px;
+  height: 32px;
+}
+
+main {
+  padding: 30px;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+main h2 {
+  padding-bottom: 30px;
+}
+
+main div.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+section.project {
+  width: 400px;
+  height: 500px;
+  box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+section.project div.content {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+p.description {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+section.project div.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.project-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section.project div.screenshot {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 5px;
+}
+
+.color2 {
+  background-color: white;
+}
+
+.color3 {
+  background-color: white;
+}
+
+div.footer-icon-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+
+footer {
+  background-color: var(--bg-color);
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer section {
+  color: white;
+}
+
+footer p,
+footer address,
+footer div.email,
+footer div.telephone {
+  font-family: "Lato";
+  color: white;
+  padding-top: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-white {
+  filter: invert(99%) sepia(1%) saturate(112%) hue-rotate(104deg)
+    brightness(118%) contrast(100%);
+}
+
+img.random {
+  width: 600px;
+  object-fit: contain;
+  height: auto;
+}
